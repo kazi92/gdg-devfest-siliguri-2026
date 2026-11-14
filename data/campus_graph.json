@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "CH-1",
+      "type": "Chiller",
+      "status": "STANDBY"
+    },
+    {
+      "id": "CH-2",
+      "type": "Chiller",
+      "status": "RUNNING"
+    },
+    {
+      "id": "AHU-3",
+      "type": "AirHandler"
+    },
+    {
+      "id": "Main Hall",
+      "type": "Space",
+      "capacity": 650
+    },
+    {
+      "id": "DevFest",
+      "type": "Event",
+      "until": "17:00",
+      "lunch": "13:00-14:00"
+    },
+    {
+      "id": "Gate 1",
+      "type": "Gate",
+      "note": "main exit"
+    },
+    {
+      "id": "Gate 3",
+      "type": "Gate",
+      "note": "side exit, usually closed"
+    },
+    {
+      "id": "SOP-FM-04",
+      "type": "SOP"
+    }
+  ],
+  "edges": [
+    {
+      "from": "CH-2",
+      "to": "AHU-3",
+      "rel": "FEEDS"
+    },
+    {
+      "from": "CH-1",
+      "to": "AHU-3",
+      "rel": "CAN_FEED"
+    },
+    {
+      "from": "AHU-3",
+      "to": "Main Hall",
+      "rel": "SERVES"
+    },
+    {
+      "from": "DevFest",
+      "to": "Main Hall",
+      "rel": "OCCUPIES"
+    },
+    {
+      "from": "Main Hall",
+      "to": "Gate 1",
+      "rel": "EXITS_VIA"
+    },
+    {
+      "from": "Main Hall",
+      "to": "Gate 3",
+      "rel": "EXITS_VIA"
+    },
+    {
+      "from": "CH-2",
+      "to": "SOP-FM-04",
+      "rel": "GOVERNED_BY"
+    },
+    {
+      "from": "Main Hall",
+      "to": "SOP-FM-04",
+      "rel": "GOVERNED_BY"
+    }
+  ]
+}

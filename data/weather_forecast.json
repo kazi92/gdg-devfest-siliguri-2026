@@ -1,0 +1,18 @@
+{
+  "source": "synthetic, shaped like Google Maps Platform Weather API output",
+  "forecast": [
+    {
+      "time": "12:00",
+      "temp_c": 32
+    },
+    {
+      "time": "13:00",
+      "temp_c": 34
+    },
+    {
+      "time": "15:00",
+      "temp_c": 35,
+      "condition": "sunny"
+    }
+  ]
+}

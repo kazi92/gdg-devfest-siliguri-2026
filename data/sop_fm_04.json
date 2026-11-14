@@ -1,0 +1,18 @@
+{
+  "id": "SOP-FM-04",
+  "rules": {
+    "chw_supply_c": [
+      6,
+      8
+    ],
+    "hall_temp_max_c": 26,
+    "hall_co2_max_ppm": 1000,
+    "approval_required": [
+      "start_or_stop_chiller"
+    ],
+    "never_automatic": [
+      "gates",
+      "fire_and_life_safety"
+    ]
+  }
+}
